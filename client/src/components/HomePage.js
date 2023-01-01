@@ -1,6 +1,8 @@
 import banner from '../assets/shokugeki.jpeg';
 import styled from 'styled-components';
 import { useEffect, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { CiPizza } from 'react-icons/ci';
 
 const HomePage = () => {
 	const [pizzas, setPizzas] = useState(null);
@@ -35,13 +37,21 @@ const HomePage = () => {
 										key={pizzaContent.id}
 									>
 										<Image src={pizzaContent.src} alt='pizza content' />
-										<p className='text-2xl uppercase text-white'>
+										<p className='text-2xl uppercase text-white p-3'>
 											{pizzaContent.name}
 											<br />
 											{pizzaContent.description}
 											<br />
 											{pizzaContent.topping}
 										</p>
+
+										<div>
+											<Link to={`/pizzas/${pizzaContent.id}`}>
+												<p className='text-1xl text-white hover:text-sky-500 border-solid border-2 border-sky-500 rounded-lg	'>
+													click for detail
+												</p>
+											</Link>
+										</div>
 									</div>
 								);
 							})}
