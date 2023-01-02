@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import Loading from './Loading';
 
 const OrderPage = () => {
 	const navigate = useNavigate();
@@ -57,7 +58,7 @@ const OrderPage = () => {
 	return (
 		<>
 			{!pizza ? (
-				<h2>Loading</h2>
+				<h2><Loading/></h2>
 			) : (
 				<div className='flex flex-col justify-center items-center bg-gray-900 text-white uppercase h-screen'>
 					<h2 className='p-5 text-3xl'>Time to order!</h2>

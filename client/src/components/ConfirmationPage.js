@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Loading from './Loading';
 
 const ConfirmationPage = () => {
 	const [orderData, setOrderData] = useState(null);
@@ -17,7 +18,7 @@ const ConfirmationPage = () => {
 	return (
 		<>
 			{!orderData ? (
-				<h2>Loading</h2>
+				<h2><Loading/></h2>
 			) : (
 				<div className='flex flex-col justify-center items-center h-screen leading-10'>
 					<h2 className='uppercase text-2xl'>Your confirmation</h2>

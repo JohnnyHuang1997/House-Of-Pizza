@@ -2,6 +2,7 @@ import banner from '../assets/shokugeki.jpeg';
 import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Loading from './Loading';
 
 const HomePage = () => {
 	const [pizzas, setPizzas] = useState(null);
@@ -20,7 +21,7 @@ const HomePage = () => {
 	return (
 		<>
 			{!pizzas ? (
-				<h1>Loading...</h1>
+				<h1><Loading/></h1>
 			) : (
 				<div className='flex flex-col justify-center items-center'>
 					<div className='flex justify-center items-center flex-col '>
