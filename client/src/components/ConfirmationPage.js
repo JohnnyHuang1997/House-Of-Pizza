@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Loading from './Loading';
+import {AiOutlineHome} from 'react-icons/ai'
 
 const ConfirmationPage = () => {
 	const [orderData, setOrderData] = useState(null);
@@ -32,6 +33,9 @@ const ConfirmationPage = () => {
 							Confirmation id: <span className='text-sky-500'>{orderData.id}</span>
 						</h2>
 					</div>
+          <div className=' text-white bg-gray-900 my-5 p-3 rounded-md hover:text-sky-500'>
+            <Link to="/"><AiOutlineHome style={{width:"30px", height:"30px"}}/></Link>
+          </div>
 				</div>
 			)}
 		</>
