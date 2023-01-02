@@ -1,4 +1,3 @@
-import './App.css';
 import SideBar from './SideBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './HomePage';
