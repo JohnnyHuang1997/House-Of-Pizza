@@ -59,7 +59,7 @@ const OrderPage = () => {
 			{!pizza ? (
 				<h2>Loading</h2>
 			) : (
-				<div className='flex flex-col justify-center items-center bg-gray-800 text-white uppercase h-screen'>
+				<div className='flex flex-col justify-center items-center bg-gray-900 text-white uppercase h-screen'>
 					<h2 className='p-5 text-3xl'>Time to order!</h2>
 					<form
 						className='flex flex-col justify-center items-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
@@ -67,7 +67,7 @@ const OrderPage = () => {
 					>
 						<label htmlFor='fname'>First Name: </label>
 						<input
-							className='px-7'
+							className='px-7 text-gray-900'
 							type='text'
 							id='fname'
 							onChange={(e) => handleChange(e.target.id, e.target.value)}
@@ -75,7 +75,7 @@ const OrderPage = () => {
 
 						<label htmlFor='lname'>Last Name: </label>
 						<input
-							className='px-7'
+							className='px-7  text-gray-900'
 							type='text'
 							id='lname'
 							onChange={(e) => handleChange(e.target.id, e.target.value)}
@@ -83,7 +83,7 @@ const OrderPage = () => {
 
 						<label htmlFor='email'>Email: </label>
 						<input
-							className='px-7'
+							className='px-7  text-gray-900'
 							type='text'
 							id='email'
 							onChange={(e) => handleChange(e.target.id, e.target.value)}
@@ -91,7 +91,7 @@ const OrderPage = () => {
 
 						<label htmlFor='address'>Address: </label>
 						<input
-							className='px-7'
+							className='px-7  text-gray-900'
 							type='text'
 							id='address'
 							onChange={(e) => handleChange(e.target.id, e.target.value)}
@@ -99,7 +99,7 @@ const OrderPage = () => {
 
 						<label htmlFor='phone'>Phone Number: </label>
 						<input
-							className='px-7'
+							className='px-7  text-gray-900'
 							type='text'
 							id='phone'
 							onChange={(e) => handleChange(e.target.id, e.target.value)}
@@ -107,7 +107,7 @@ const OrderPage = () => {
 						<div className='flex flex-col justify-center items-center border-solid border-2 border-white my-5 rounded-md uppercase'>
 							<label htmlFor='pizza'>Your pick: </label>
 							<select
-								className='px-7'
+								className='px-7  text-gray-900'
 								type='text'
 								id='pizza'
 								onChange={(e) => handleChange(e.target.id, e.target.value)}
@@ -124,9 +124,10 @@ const OrderPage = () => {
 										return (
 											<div
 												className='flex flex-row justify-center items-center uppercase text-center'
-												key={cost.id}
+												key={Math.floor(Math.random() * 14000000)}
 											>
 												<input
+													className='text-gray-900'
 													type='radio'
 													id='price'
 													value={pizzaCost.price[cost]}

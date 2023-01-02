@@ -25,7 +25,7 @@ const HomePage = () => {
 				<div className='flex flex-col justify-center items-center'>
 					<div className='flex justify-center items-center flex-col '>
 						<Banner src={banner} alt='banner' />
-						<h2 className='shadow-lg text-5xl my-3 font-serif text-gray-900 uppercase'>
+						<h2 className='text-5xl my-6 font-serif text-gray-900 uppercase'>
 							House of pizza
 						</h2>
 						<div className='grid grid-cols-3 justify-center items-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10'>

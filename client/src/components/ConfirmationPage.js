@@ -19,20 +19,16 @@ const ConfirmationPage = () => {
 			{!orderData ? (
 				<h2>Loading</h2>
 			) : (
-				<div>
-					<h2>Your confirmation</h2>
-					<div>
-						<h2>
-							Name: {orderData.name}
-							Email: {orderData.email}
-							Phone: {orderData.phone}
-							Address: {orderData.address}
-							<div>
-								<h2>
-									{orderData.pizza} {orderData.price}
-								</h2>
-								<h2>Confirmation id: {orderData.id}</h2>
-							</div>
+				<div className='flex flex-col justify-center items-center h-screen leading-10'>
+					<h2 className='uppercase text-2xl'>Your confirmation</h2>
+					<div className=' p-5 bg-gray-900 text-white'>
+						<h2 className='uppercase'>
+							Name: {orderData.fname}&nbsp;{orderData.lname}<br/>
+							Email: {orderData.email}<br/>
+							Phone: {orderData.phone}<br/>
+							Address: {orderData.address}<br/>
+							Pizza: {orderData.pizza} <span className='text-sky-500 border-2 border-solid border-sky-500'>{orderData.price}</span><br/>
+							Confirmation id: <span className='text-sky-500'>{orderData.id}</span>
 						</h2>
 					</div>
 				</div>
