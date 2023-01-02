@@ -1,8 +1,7 @@
 import banner from '../assets/shokugeki.jpeg';
 import styled from 'styled-components';
 import { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { CiPizza } from 'react-icons/ci';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
 	const [pizzas, setPizzas] = useState(null);
@@ -33,21 +32,19 @@ const HomePage = () => {
 							{pizzas.map((pizzaContent) => {
 								return (
 									<div
-										className='py-5 px-5 flex flex-col justify-center items-center text-center bg-gray-900 rounded-xl'
+										className='py-5 px-5 flex flex-col justify-center items-center text-center bg-gray-900 '
 										key={pizzaContent.id}
 									>
 										<Image src={pizzaContent.src} alt='pizza content' />
-										<p className='text-2xl uppercase text-white p-3'>
+										<p className='text-2xl uppercase text-white p-3 '>
 											{pizzaContent.name}
-											<br />
-											{pizzaContent.description}
 											<br />
 											{pizzaContent.topping}
 										</p>
 
 										<div>
 											<Link to={`/pizzas/${pizzaContent.id}`}>
-												<p className='text-1xl text-white hover:text-sky-500 border-solid border-2 border-sky-500 rounded-lg	'>
+												<p className='text-1xl text-white hover:text-sky-500 hover:border-sky-500 border-solid border-2 border-white p-2'>
 													click for detail
 												</p>
 											</Link>
@@ -67,8 +64,7 @@ export default HomePage;
 
 const Banner = styled.img`
 	object-fit: contain;
-	height: 30vh;
-	width: 100%;
+	width: 100vw;
 `;
 
 const Image = styled.img`
